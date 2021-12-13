@@ -1,6 +1,6 @@
 <h3 align = "left"> Hello there 👋 </h3>
 
-![Github Stats](https://github-readme-stats.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight)
+![Github Stats](https://github-readme-stats.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)
 ![LachlanDev github streak](https://github-readme-streak-stats.herokuapp.com/?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)
 <br>
 <h2 align = "left"> SDAIA T5 Boot Camp Projects: </h2>
