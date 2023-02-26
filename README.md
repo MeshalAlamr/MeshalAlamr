@@ -1,18 +1,16 @@
 <h3 align = "left"> Hello there 👋 </h3>
 
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=MeshalAlamr.visitor-badge) 
 
 ![Github Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)
 ![LachlanDev github streak](https://github-readme-streak-stats.herokuapp.com/?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)
 <br>
-
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=MeshalAlamr.visitor-badge)
 
 <h2 align = "left"> Highlighted Projects: </h2>
 
 <a href="https://github.com/MeshalAlamr/smartathon-theme-1" target="_blank">
   <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=MeshalAlamr&repo=smartathon-theme-1&theme=tokyonight" />
 </a>
-
 <a href="https://github.com/MeshalAlamr/flight-price-prediction" target="_blank">
  <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=MeshalAlamr&repo=flight-price-prediction&theme=tokyonight" />
 </a>
@@ -20,7 +18,6 @@
 <a href="https://github.com/MeshalAlamr/quick-action-recognition" target="_blank">
   <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=MeshalAlamr&repo=quick-action-recognition&theme=tokyonight" />
 </a>
-
 <a href="https://github.com/MeshalAlamr/speech-emotion-recognition" target="_blank">
   <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=MeshalAlamr&repo=speech-emotion-recognition&theme=tokyonight" />
 </a>
@@ -28,7 +25,6 @@
 <a href="https://github.com/MeshalAlamr/rain-prediction" target="_blank">
   <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=MeshalAlamr&repo=rain-prediction&theme=tokyonight" />
 </a>
-
 <a href="https://github.com/MeshalAlamr/nyc-recycling-bins-analysis" target="_blank">
   <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=MeshalAlamr&repo=nyc-recycling-bins-analysis&theme=tokyonight" />
 </a>
