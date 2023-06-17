@@ -1,6 +1,6 @@
 <h3 align = "left"> Hello there 👋 </h3>
 
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=MeshalAlamr.visitor-badge) 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMeshalAlamr&countColor=%23263759&style=flat)
 
 ![Github Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)
 ![LachlanDev github streak](https://github-readme-streak-stats.herokuapp.com/?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)
