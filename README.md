@@ -5,7 +5,7 @@
 ![Github Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)
 ![LachlanDev github streak](https://github-readme-streak-stats.herokuapp.com/?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)
 <br>
-
+<!---
 <h2 align = "left"> Highlighted Projects: </h2>
 
 <a href="https://github.com/MeshalAlamr/smartathon-theme-1" target="_blank">
@@ -30,8 +30,8 @@
 </a>
 
 <div align="center">
-
 <br>
+-->
 
 <h2 align="left"> Languages and Tools:</h2>
 <p align="left"> 
