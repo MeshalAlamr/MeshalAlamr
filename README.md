@@ -1,10 +1,9 @@
-<h3 align = "left"> Hello there 👋 </h3>
+<h3 align = "left"> Hello there 🦔 </h3>
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMeshalAlamr&countColor=%23263759&style=flat)
 
-![Github Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)
-![LachlanDev github streak](https://github-readme-streak-stats.herokuapp.com/?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)
-<br>
+![Github Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)<br>
+[![GitHub Streak](https://streak-stats.demolab.com?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)](https://git.io/streak-stats)
 <!---
 <h2 align = "left"> Highlighted Projects: </h2>
 
@@ -33,6 +32,7 @@
 <br>
 -->
 
+<!--
 <h2 align="left"> Languages and Tools:</h2>
 <p align="left"> 
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
@@ -46,6 +46,8 @@
   <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" width="40" height="40"/> </a> 
   <a href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" rel="noreferrer"> <img src="https://cdn.freebiesupply.com/logos/large/2x/flask-logo-png-transparent.png" alt="flask" width="40" height="40"/> </a> 
   </p>
+-->
+
 <h2 align = "left"> Find Me On: </h2>
   
 ### <p align = "left"> Twitter [![Twitter][1.2]][1] </p>
