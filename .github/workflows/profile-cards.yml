@@ -1,0 +1,90 @@
+name: Profile cards
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Render streak card
+        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
+        with:
+          options: user=MeshalAlamr&theme=tokyonight&hide_border=true&border_radius=8
+          path: out/streak.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check out stats generator
+        uses: actions/checkout@v4
+        with:
+          repository: MeshalAlamr/github-readme-stats
+          ref: master
+          path: grs
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install generator deps
+        working-directory: grs
+        run: npm ci --no-audit --no-fund
+
+      - name: Render stats card
+        env:
+          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          PORT=9000 node grs/express.js &
+          SERVER=$!
+          trap 'kill $SERVER 2>/dev/null || true' EXIT
+          for _ in $(seq 1 30); do
+            curl -fsS -o /dev/null "http://127.0.0.1:9000/api?username=MeshalAlamr" && break
+            sleep 1
+          done
+          curl -fsS -o out/stats.svg \
+            "http://127.0.0.1:9000/api?username=MeshalAlamr&show_icons=true&include_all_commits=true&hide_border=true&hide_title=true&border_radius=8&theme=tokyonight"
+
+      - name: Reject error cards
+        run: |
+          set -euo pipefail
+          for f in out/streak.svg out/stats.svg; do
+            size=$(wc -c < "$f")
+            echo "$f -> ${size} bytes"
+            if [ "$size" -lt 2500 ]; then
+              echo "::error::$f looks like an error card (${size} bytes); refusing to publish"
+              exit 1
+            fi
+            if grep -qiE 'Something went wrong|Failed to retrieve|Maximum retries' "$f"; then
+              echo "::error::$f contains an error message; refusing to publish"
+              exit 1
+            fi
+          done
+
+      - name: Publish to assets branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --quiet --branch assets --depth 1 \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" pub
+          cp out/streak.svg out/stats.svg pub/
+          cd pub
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No change in rendered cards; nothing to commit."
+          else
+            git commit -qm "chore: refresh profile cards"
+            git push --quiet
+            echo "Published updated cards."
+          fi
