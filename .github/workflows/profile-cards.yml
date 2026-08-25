@@ -15,6 +15,11 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
+    env:
+      # Optional. Without it the stats card is skipped; the streak card
+      # works on the built-in token. A classic PAT with no scopes is
+      # enough for public stats; add `repo` to count private commits.
+      PAT_1: ${{ secrets.PAT_1 }}
     steps:
       - name: Render streak card
         uses: DenverCoder1/github-readme-streak-stats@v1.7.0
@@ -24,6 +29,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check out stats generator
+        if: env.PAT_1 != ''
         uses: actions/checkout@v4
         with:
           repository: MeshalAlamr/github-readme-stats
@@ -31,16 +37,17 @@ jobs:
           path: grs
 
       - uses: actions/setup-node@v4
+        if: env.PAT_1 != ''
         with:
           node-version: 22
 
       - name: Install generator deps
+        if: env.PAT_1 != ''
         working-directory: grs
         run: npm ci --no-audit --no-fund
 
       - name: Render stats card
-        env:
-          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        if: env.PAT_1 != ''
         run: |
           set -euo pipefail
           PORT=9000 node grs/express.js &
@@ -56,7 +63,11 @@ jobs:
       - name: Reject error cards
         run: |
           set -euo pipefail
-          for f in out/streak.svg out/stats.svg; do
+          if [ -z "${PAT_1}" ]; then
+            echo "::warning::PAT_1 secret not set - skipping the stats card. Streak card only."
+          fi
+          shopt -s nullglob
+          for f in out/*.svg; do
             size=$(wc -c < "$f")
             echo "$f -> ${size} bytes"
             if [ "$size" -lt 2500 ]; then
@@ -76,7 +87,7 @@ jobs:
           set -euo pipefail
           git clone --quiet --branch assets --depth 1 \
             "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" pub
-          cp out/streak.svg out/stats.svg pub/
+          cp out/*.svg pub/
           cd pub
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
