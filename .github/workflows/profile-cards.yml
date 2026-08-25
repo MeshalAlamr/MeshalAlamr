@@ -32,7 +32,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2.0.2
         with:
           card: stats
-          options: username=MeshalAlamr&show_icons=true&include_all_commits=true&hide_border=true&hide_title=true&border_radius=8&theme=tokyonight
+          options: username=MeshalAlamr&show_icons=true&card_width=495&include_all_commits=true&hide_border=true&hide_title=true&border_radius=8&theme=tokyonight
           path: out/stats.svg
           token: ${{ secrets.PAT_1 }}
           fail_on_error: "true"
