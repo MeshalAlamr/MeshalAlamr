@@ -2,8 +2,9 @@
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMeshalAlamr&countColor=%23263759&style=flat)
 
-![Github Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=MeshalAlamr&show_icons=true&count_private=true&include_all_commits=false&theme=tokyonight)<br>
-[![GitHub Streak](https://streak-stats.demolab.com?user=MeshalAlamr&include_all_commits=true&count_private=true&theme=tokyonight)](https://git.io/streak-stats)
+![Github Stats](https://raw.githubusercontent.com/MeshalAlamr/MeshalAlamr/assets/stats.svg)<br>
+[![GitHub Streak](https://raw.githubusercontent.com/MeshalAlamr/MeshalAlamr/assets/streak.svg)](https://git.io/streak-stats)
+
 <!---
 <h2 align = "left"> Highlighted Projects: </h2>
 
